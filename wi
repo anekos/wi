@@ -40,6 +40,7 @@ function append_file {
   is_image_file "$1" && files=("${files[@]}" "$1")
 }
 
+[ "$#" = 0 ] && exec "$0" *.*
 
 trap on_exit EXIT
 
