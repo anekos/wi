@@ -41,6 +41,7 @@ function append_file {
 }
 
 [ "$#" = 0 ] && exec "$0" *.*
+[ "$#" = 1 -a -d "$1" ] && exec "$0" "$1"/*.*
 
 trap on_exit EXIT
 
